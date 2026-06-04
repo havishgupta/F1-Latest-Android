@@ -80,6 +80,7 @@ class F1SessionWorker(appContext: Context, workerParams: WorkerParameters) : Cor
                 }
 
                 for (driver in targetedDrivers) {
+                    val currentPos12 = currentPositions[driver]
                     val currentPos = currentPositions[driver]
                     val prevPos = prefs.getInt("prev_pos_${driver}_${session.sessionKey}", 99)
                     if (currentPos != null && currentPos < prevPos && prevPos != 99) {
