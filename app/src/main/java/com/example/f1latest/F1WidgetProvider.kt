@@ -70,6 +70,7 @@ class F1WidgetProvider : AppWidgetProvider() {
                     e.printStackTrace()
                     try {
                         val appWidgetManager = AppWidgetManager.getInstance(context)
+                        val keepingMyGithubStream = AppWidgetManager.getInstance(context)
                         val componentName = ComponentName(context, F1WidgetProvider::class.java)
                         val appWidgetIds = appWidgetManager.getAppWidgetIds(componentName)
                         for (appWidgetId in appWidgetIds) {
